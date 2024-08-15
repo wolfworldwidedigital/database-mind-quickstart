@@ -34,11 +34,11 @@ database_schema = os.getenv('DATABASE_SCHEMA')
 
 # If the MindsDB API Key is not found, print an error message and exit
 if not mindsdb_api_key:
-    print("Please create a .env file and add your MindsDB API Key")
+    print("API Key missing")
     exit()
 
 if not database_user or not database_password or not database_host or not database_port or not database_database or not database_schema:
-    print("Please create a .env file and add your Database connection details")
+    print("Database connection missing")
     exit()
 
 # Create a Flask application instance
